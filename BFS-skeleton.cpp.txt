@@ -1,0 +1,33 @@
+#include <iostream>
+#include <queue>
+
+struct TreeNode {
+    int data;
+    TreeNode* left;
+    TreeNode* right;
+
+    TreeNode(int value) : data(value), left(nullptr), right(nullptr) {}
+};
+
+void bfs(TreeNode* root) {
+    
+}
+
+int main() {
+    // Create a simple binary tree
+    TreeNode* root = new TreeNode(1);
+    root->left = new TreeNode(2);
+    root->right = new TreeNode(3);
+    root->left->left = new TreeNode(4);
+    root->left->right = new TreeNode(5);
+    root->right->left = new TreeNode(6);
+    root->right->right = new TreeNode(7);
+
+    std::cout << "BFS traversal of the tree: ";
+    bfs(root);
+
+    // Don't forget to free the allocated memory in a complete program
+    // (This is just a simple example, so memory cleanup is omitted here)
+
+    return 0;
+}
